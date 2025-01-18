@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Typing Effect
     const typingText = document.querySelector(".typing-text");
-    const words = ["a Web Developer.", "a Designer.", "a Problem Solver."];
+    const words = ["Web Developer.", "Designer.", "Problem Solver."];
     let index = 0;
     let charIndex = 0;
     let isDeleting = false;
