@@ -23,7 +23,7 @@
         </div>
     </section>
 
-    <!-- Sticky Navbar -->
+    <!-- Navbar with Tabs -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Joel Farnsworth</a>
@@ -31,21 +31,31 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#wordpress">WordPress</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#woocommerce">WooCommerce</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#squarespace">Squarespace</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#django">Django</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#mern">MERN Stack</a></li>
+                <ul class="navbar-nav ms-auto nav nav-tabs" id="myTabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#wordpress">WordPress</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#woocommerce">WooCommerce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#squarespace">Squarespace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#django">Django</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#mern">MERN Stack</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Projects Section -->
-    <div class="container mt-5" id="projects">
-
-        <section id="wordpress" class="project-category">
+    <!-- Tab Content -->
+    <div class="container mt-5 tab-content" id="projects">
+        
+        <div class="tab-pane fade show active" id="wordpress">
             <h2 class="text-center">WordPress Projects</h2>
             <div class="row">
                 <div class="col-md-4">
@@ -58,9 +68,27 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Other sections (WooCommerce, Squarespace, Django, MERN) go here -->
+        <div class="tab-pane fade" id="woocommerce">
+            <h2 class="text-center">WooCommerce Projects</h2>
+            <p>Here are my WooCommerce projects...</p>
+        </div>
+
+        <div class="tab-pane fade" id="squarespace">
+            <h2 class="text-center">Squarespace Projects</h2>
+            <p>Here are my Squarespace projects...</p>
+        </div>
+
+        <div class="tab-pane fade" id="django">
+            <h2 class="text-center">Django Projects</h2>
+            <p>Here are my Django projects...</p>
+        </div>
+
+        <div class="tab-pane fade" id="mern">
+            <h2 class="text-center">MERN Stack Projects</h2>
+            <p>Here are my MERN stack projects...</p>
+        </div>
 
     </div>
 

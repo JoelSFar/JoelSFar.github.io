@@ -43,27 +43,6 @@ body {
     min-height: 50px;
 }
 
-/* Scroll Down Button */
-.scroll-down {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 2rem;
-    animation: bounce 2s infinite;
-    text-decoration: none;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-}
-
 /* Navbar */
 .navbar {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -75,17 +54,16 @@ body {
     transition: color 0.3s ease-in-out;
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
     color: #ffcc00;
 }
 
-/* Projects */
-.project-category {
-    padding: 60px 0;
+/* Tab Content */
+.tab-content {
+    padding: 50px 0;
 }
 
 .project-card {
-    cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 
