@@ -1,35 +1,128 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joel Farnsworth | Projects</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
 
-/* Tabs */
-.nav-tabs .nav-link {
-    color: #333;
-    font-weight: bold;
-}
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Joel Farnsworth</a>
+        </div>
+    </nav>
 
-.nav-tabs .nav-link.active {
-    background-color: #007bff;
-    color: #fff;
-}
+    <!-- Hero Section -->
+    <header class="text-center my-4">
+        <h1>My Web Development Projects</h1>
+        <p>Showcasing my work with WordPress, WooCommerce, Squarespace, Django, and MERN.</p>
+    </header>
 
-/* Project Card Styling */
-.project-card {
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
+    <!-- Tabs Navigation -->
+    <div class="container">
+        <ul class="nav nav-tabs" id="projectTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="wordpress-tab" data-bs-toggle="tab" data-bs-target="#wordpress" type="button" role="tab">WordPress</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="woocommerce-tab" data-bs-toggle="tab" data-bs-target="#woocommerce" type="button" role="tab">WooCommerce</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="squarespace-tab" data-bs-toggle="tab" data-bs-target="#squarespace" type="button" role="tab">Squarespace</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="django-tab" data-bs-toggle="tab" data-bs-target="#django" type="button" role="tab">Django</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="mern-tab" data-bs-toggle="tab" data-bs-target="#mern" type="button" role="tab">MERN Stack</button>
+            </li>
+        </ul>
 
-.project-card:hover {
-    transform: scale(1.05);
-}
+        <div class="tab-content mt-4" id="projectTabsContent">
 
-.card img {
-    height: 200px;
-    object-fit: cover;
-}
+            <!-- WordPress Projects -->
+            <div class="tab-pane fade show active" id="wordpress" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card project-card" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                            <img src="project1.jpg" class="card-img-top" alt="Project 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Southern Utah Therapy</h5>
+                                <p class="card-text">Dynamic directory system using PHP and WordPress.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-/* Navbar Styling */
-.navbar {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+            <!-- WooCommerce Projects -->
+            <div class="tab-pane fade" id="woocommerce" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card project-card" data-bs-toggle="modal" data-bs-target="#project2Modal">
+                            <img src="project2.jpg" class="card-img-top" alt="Project 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Ammunation USA</h5>
+                                <p class="card-text">Custom WooCommerce home page for increased sales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Squarespace Projects -->
+            <div class="tab-pane fade" id="squarespace" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card project-card" data-bs-toggle="modal" data-bs-target="#project3Modal">
+                            <img src="project3.jpg" class="card-img-top" alt="Project 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Draft Horses & Mules</h5>
+                                <p class="card-text">Seamless PayPal integration and UI enhancements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Django Projects -->
+            <div class="tab-pane fade" id="django" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <img src="project4.jpg" class="card-img-top" alt="Project 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Django CMS</h5>
+                                <p class="card-text">Developed a Django-based CMS for client content management.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MERN Projects -->
+            <div class="tab-pane fade" id="mern" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <img src="project5.jpg" class="card-img-top" alt="Project 5">
+                            <div class="card-body">
+                                <h5 class="card-title">MERN Stack App</h5>
+                                <p class="card-text">Full-stack app using React, Node.js, and MongoDB.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
