@@ -27,9 +27,15 @@ body {
     background: rgba(0, 0, 0, 0.6);
 }
 
-.welcome-section h1 {
+.welcome-section h2 {
     font-size: 3rem;
     font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.welcome-section h2.visible {
+    opacity: 1;
 }
 
 .welcome-section .name {
@@ -45,21 +51,20 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2; /* Ensure it's on top of the floating text */
+    z-index: 2;
     opacity: 1;
-    pointer-events: none; /* Prevent interaction */
+    pointer-events: none;
 }
 
-/* Floating Text */
-.floating-text {
+#developer, #designer, #innovator {
     position: absolute;
     font-size: 6rem;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.8);
     opacity: 0.1;
     pointer-events: none;
-    z-index: 1; /* Keep the floating text behind the typing text */
-    mix-blend-mode: lighten; /* Glow effect */
+    z-index: 1;
+    mix-blend-mode: lighten;
 }
 
 /* Navbar */
