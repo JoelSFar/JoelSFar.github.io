@@ -76,4 +76,33 @@ document.addEventListener("DOMContentLoaded", function() {
     typingTextElement.style.fontWeight = "bold";
     typingTextElement.style.color = "white";
     document.querySelector("#home").appendChild(typingTextElement);
+
+    // Start typing effect for the newly created dynamic element
+    const dynamicTypingText = typingTextElement;
+    const dynamicWords = ["a Creative Thinker.", "an Innovator.", "a Problem Solver."];
+    let dynamicIndex = 0;
+    let dynamicCharIndex = 0;
+    let dynamicIsDeleting = false;
+
+    function dynamicTypeEffect() {
+        let currentDynamicWord = dynamicWords[dynamicIndex];
+        if (dynamicIsDeleting) {
+            dynamicTypingText.textContent = currentDynamicWord.substring(0, dynamicCharIndex--);
+        } else {
+            dynamicTypingText.textContent = currentDynamicWord.substring(0, dynamicCharIndex++);
+        }
+
+        if (!dynamicIsDeleting && dynamicCharIndex === currentDynamicWord.length) {
+            dynamicIsDeleting = true;
+            setTimeout(dynamicTypeEffect, 1000);
+        } else if (dynamicIsDeleting && dynamicCharIndex === 0) {
+            dynamicIsDeleting = false;
+            dynamicIndex = (dynamicIndex + 1) % dynamicWords.length;
+            setTimeout(dynamicTypeEffect, 500);
+        } else {
+            setTimeout(dynamicTypeEffect, dynamicIsDeleting ? 50 : 100);
+        }
+    }
+
+    dynamicTypeEffect();
 });
