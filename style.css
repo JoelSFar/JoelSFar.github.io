@@ -37,10 +37,29 @@ body {
 }
 
 .typing-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #f8f9fa;
     min-height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure it's on top of the floating text */
+    opacity: 1;
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Floating Text */
+.floating-text {
+    position: absolute;
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 1; /* Keep the floating text behind the typing text */
+    mix-blend-mode: lighten; /* Glow effect */
 }
 
 /* Navbar */
