@@ -105,4 +105,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     dynamicTypeEffect();
+
+    // Fade in the "Hi, I'm Joel" text after page load
+    setTimeout(function() {
+        document.querySelector("#home h2").classList.add("visible");
+    }, 500); // Delay for better effect (adjust timing as needed)
 });
