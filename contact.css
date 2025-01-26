@@ -1,6 +1,7 @@
 /* Contact Page Hero Section */
 .contact-hero-section {
     height: 50vh;
+    background-image: url('contact-us_36325-2135.png');
 }
 
 .hero-section h1 {
