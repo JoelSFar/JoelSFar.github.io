@@ -2,7 +2,6 @@
 .contact-page .hero-section {
     height: 50vh;
     background: url('../images/contact-hero.png') no-repeat center center/cover;
-    color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
