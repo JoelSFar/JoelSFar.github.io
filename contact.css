@@ -1,0 +1,37 @@
+/* Contact Page Hero Section */
+.contact-page .hero-section {
+    height: 50vh;
+    background: url('../images/contact-hero.png') no-repeat center center/cover;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-page .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.contact-page .hero-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+.contact-page .hero-section .btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-page .hero-section .btn:hover {
+    background-color: white;
+    color: black;
+}
